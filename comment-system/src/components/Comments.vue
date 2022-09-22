@@ -5,7 +5,7 @@
         <FormComment v-on:add-comment="addComment" />
         <hr />
             <div class="list-group">
-                <p>No comments...</p>
+                <p v-if="comments.length <= 0">No comments...</p>
                 <div class="list-group-item" v-for="comment, index in allComments">
                 <span class="comment__author">Author: <strong>{{ comment.name }}</strong></span>
                 <p>{{ comment.message }}</p>
