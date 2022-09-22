@@ -8,29 +8,38 @@
     <title>Comment System</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Comments</h1>
-        <hr />
-        <div class="form-comment form-froup">
-            <p>
-                <input placeholder="name" type="text" name="author" class="form-control" />
-            </p>
-            <p>
-                <textarea placeholder="comment" name="message" class="form-control" ></textarea>
-            </p>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-        <hr />
-        <div class="list-group">
-            <div class="list-group-item">
-                <span class="comment__author">Author: <strong>Ayrton</strong></span>
-                <p>Test Message</p>
-                <div>
-                    <a href="#" title="Delete">Delete</a>
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            template: `
+            <div class="container">
+            <h1>Comments</h1>
+            <hr />
+                <div class="form-comment form-froup">
+                <p>
+                    <input placeholder="name" type="text" name="author" class="form-control" />
+                </p>
+                <p>
+                    <textarea placeholder="comment" name="message" class="form-control" ></textarea>
+                </p>
+                <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+                <hr />
+                <div class="list-group">
+                    <div class="list-group-item">
+                    <span class="comment__author">Author: <strong>Ayrton</strong></span>
+                    <p>Test Message</p>
+                        <div>
+                            <a href="#" title="Delete">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <hr />
             </div>
-        </div>
-        <hr />
-    </div>
+        `,
+        })
+    </script>
 </body>
 </html>
