@@ -57,6 +57,11 @@
                     name: comment.name.trim() === '' ? 'Anonymous' : comment.name
                 }))
             }
+        },
+        watch: {
+            allComments(val) {
+                console.log('val', val);
+            }
         }
     }
 </script>
